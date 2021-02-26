@@ -11,12 +11,18 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      drinksA: this.props
+      drinksA: [],
+      drinksNa:[]
     }
   }
-
+componentDidMount=()=>{
+  this.getDrinks()
+  this.getDrinksNA()
+}
   
-  componentDidMount = () => {
+  getDrinks = () => {
+    console.log("Get drink called")
+    
     axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic', {
       headers: {
         Accept: 'application/json'
@@ -30,13 +36,27 @@ class App extends Component {
 
       })
   }
-
-   
+     
+    getDrinksNA = () => {
+      console.log("Get drink called")
+      
+      axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic', {
+        headers: {
+          Accept: 'application/json'
+        }
+      })
+        .then(response => {
+          console.log(response.data.drinks)
+          this.setState({
+            getDrinksNA: response.data.drinks
+          })
   
+        })
+    }
+      
+
 
   render() {
-    
-    
     
     return (
       <div className="App">
@@ -44,18 +64,16 @@ class App extends Component {
           <Header />
 
         </header>
-
-        < Route path='/' render={(routerProps) =>
-          <Homepage {...this.props} {...routerProps} />
-        }
-
-        ></Route>
-        < Route path='/' render={(routerProps) =>
-          <Gallery {...this.state} {...routerProps} />
+        <Switch>
+        < Route  exact path='/' render={(routerProps) =>
+          <Homepage getDrinks = {this.getDrinks} {...this.state} {...routerProps} />
+        }></Route>
+        < Route path ='/Gallery' render={(routerProps) =>
+          <Gallery {...this.state}  {...routerProps}  />
         }
         ></Route>
        
-
+       </Switch>
       </div>
     );
   }

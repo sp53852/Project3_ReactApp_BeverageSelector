@@ -16,6 +16,7 @@ class Gallery extends Component {
         //     )
         return (
             <div>
+                <h1>Gallery</h1>
                 {/* <h1>Parks List</h1> */}
                 {/* {parksList} */}
             </div>
