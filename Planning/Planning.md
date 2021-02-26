@@ -19,6 +19,7 @@ Get the ingredient nutrition calculation based on ingredients of recipe / Calori
 Future improvement
 1. Multiple calls and marry the results together and display on gallery
 2. Results of the ingredient search - Display alcoholic and non-alcoholic in seperate sub sections on gallery page 
+3. Drink Recipe page - the steps for preparation will have option of language selection
 
 User Stories
 
@@ -36,17 +37,17 @@ Search Page
 1. Results of search funtion -
     As a user I expect to see the results for the ingredient I searched for displayed on the gallery page
 
-Alcoholic drink link
+Gallery page - Alcoholic drink link
 1. Results of alcoholic drink link click
     As a user I expect to see the results for the alcoholic drinks displayed on the gallery page
 
-Non-alcoholic drink link
+Gallery Page - Non-alcoholic drink link
 1. Results of non-alcoholic drink link click
     As a user I expect to see the results for the non-alcoholic drinks displayed on the gallery page
 
-Gallery item link click
-1. Link click of gallery item
-    As a user I expect to see the drink ingredients and recipe creation steps on drink recipe page that displays when the user clicks on gallery item
+Recipe page
+1. Link click of gallery item - leads to recipe page
+    As a user I expect to see the drink ingredients, their measurements and recipe creation steps on drink recipe page that displays when the user clicks on gallery item
 
                 
 Components
