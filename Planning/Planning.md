@@ -51,15 +51,22 @@ Recipe page
 
                 
 Components
-Header (app)
-Footer (app)
-Homepage (/)(app)
-    links 1st , change to buttons after functioning
-    state - <Type of bev> , <ingredients> 
-Search (/search)(Homepage)
-Picture Gallery of thumbnails (/homepage)(Homepage) - the props for alo and non-alcohol will be passed
-Picture Gallery of thumbnails (/search)(Search) - the props for search will be passed
-Drink Recipe (/homepage/gallery) (refactor futher components later)
+Header (app) - Search box, (Home link)
+
+    (/)     Homepage (app)
+            links 1st , change to buttons after functioning
+            (App) - state - <Type of bev> , <ingredients> 
+                    - State - Recipe of app            
+            Click of link will do a API call and store the results in the state of App
+            All method calls to webservices will lie in app class
+        
+
+(/gallery)      Picture Gallery of thumbnails (/homepage)(Homepage) - the props for alo and non-alcohol will be passed
+                On click of gallery image - one more API call - the method will be in App - the state will updated in App
+                
+                Picture Gallery of thumbnails (/search)(Search) - the props for search will be passed
+
+(/recipe/:id)   Drink Recipe (/homepage/gallery) (refactor futher components later)
 
 
 Picturegallery ()    
