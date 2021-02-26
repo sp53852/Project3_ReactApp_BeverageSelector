@@ -12,7 +12,7 @@ class App extends Component {
     super(props)
     this.state = {
       drinksA: [],
-      drinksNa:[]
+      drinksNA:[]
     }
   }
 componentDidMount=()=>{
@@ -48,12 +48,17 @@ componentDidMount=()=>{
         .then(response => {
           console.log(response.data.drinks)
           this.setState({
-            getDrinksNA: response.data.drinks
+            drinksNA: response.data.drinks
           })
   
         })
     }
       
+
+
+
+
+    
 
 
   render() {
