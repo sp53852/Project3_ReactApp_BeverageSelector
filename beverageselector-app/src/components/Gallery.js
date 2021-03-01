@@ -19,14 +19,14 @@ class Gallery extends Component {
         console.log(drinks)
 
         let drinksList = drinks.map((value, index) =>
-           
-            <div key={index}>
-                <div className="container">
-                    <div className="centered">{value.strDrink}</div>
-                    <img src={value.strDrinkThumb}></img>
+            <Link to={"/Recipe/" + value.idDrink} >
+                <div key={index}>
+                    <div className="container">
+                        <div className="centered">{value.strDrink}</div>
+                        <img src={value.strDrinkThumb}></img>
+                    </div>
                 </div>
-
-            </div>
+            </Link>
         )
         return (
             <div >

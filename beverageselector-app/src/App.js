@@ -5,7 +5,8 @@ import Header from "./components/Header";
 import axios from "axios";
 import { Switch, Route, Link, Redirect } from 'react-router-dom';
 import Homepage from './components/Homepage';
-import Gallery from './components/Gallery'
+import Gallery from './components/Gallery';
+import Recipe from './components/Recipe';
 
 class App extends Component {
   constructor(props) {
@@ -73,6 +74,7 @@ class App extends Component {
         <Switch>
           < Route exact path='/' render={(routerProps) => <Homepage getDrinks={this.getDrinks} {...this.state} {...routerProps} />}></Route>
           < Route path='/Gallery/:drinkType' render={(routerProps) => <Gallery {...this.state}{...routerProps} />}></Route>
+          < Route path='/Recipe/:idDrink' render={(routerProps) => <Recipe {...this.state}{...routerProps} />}></Route>
         </Switch>
 
       </div>
