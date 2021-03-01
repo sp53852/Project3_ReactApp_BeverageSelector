@@ -8,11 +8,8 @@ function Homepage(props) {
         <div className="box2">
            <div><h5>Hompage</h5></div>
 
-           <Link  to={'/Gallery'}>
-           Alcoholic Links</Link>
-           <br/> <br/>
-           <Link to={'/Gallery'}>
-           Non-Alcoholic Links</Link>
+           <Link to={'/Gallery/Alcoholic'}>Alcoholic Links</Link> <br/> <br/>
+           <Link to={'/Gallery/Non_Alcoholic'}>Non-Alcoholic Links</Link>
                     
         </div>
     )

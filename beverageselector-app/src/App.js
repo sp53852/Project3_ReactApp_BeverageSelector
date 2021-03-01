@@ -65,20 +65,17 @@ componentDidMount=()=>{
     
     return (
       <div className="App">
+
         <header>
           <Header />
-
         </header>
+
         <Switch>
-        < Route  exact path='/' render={(routerProps) =>
-          <Homepage getDrinks = {this.getDrinks} {...this.state} {...routerProps} />
-        }></Route>
-        < Route path ='/Gallery' render={(routerProps) =>
-          <Gallery {...this.state}  {...routerProps}  />
-        }
-        ></Route>
-       
+        < Route  exact path='/' render={(routerProps) =><Homepage getDrinks = {this.getDrinks} {...this.state} {...routerProps} />}></Route>
+        < Route path ='/Gallery/:drinkType'render={(routerProps) =><Gallery {...this.state}{...routerProps} />}></Route>
+        
        </Switch>
+
       </div>
     );
   }
