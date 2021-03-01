@@ -1,0 +1,30 @@
+.box {
+    font-size: x-large;
+    background-color: black;
+    color: #D9B175;
+    display: flex;
+    justify-content: space-between;
+    padding:  1px;
+    padding-left:20px;
+    padding-right:10px;
+    align-items: center;
+    font-family: fantasy;
+}
+
+.linkStyle{
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+}
+
+.linkStyle div{
+    padding-right:20px;
+}
+
+.divBox{
+    text-align: center;
+    border: 3px solid white;
+    padding-left:20px;
+    font-weight: bold;
+    border-radius: 5px;
+}

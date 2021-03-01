@@ -1,0 +1,16 @@
+.intro{
+    padding: 40px;
+    font-size: larger;
+    color: white;
+    
+}
+.pict {
+    display: flex;
+    /* flex-direction: row; */
+    padding: 30px;
+    justify-content:space-around;
+    
+}
+.box2{
+    text-align: center;
+}
