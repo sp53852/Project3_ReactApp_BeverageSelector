@@ -12,17 +12,17 @@ class App extends Component {
     super(props)
     this.state = {
       drinksA: [],
-      drinksNA:[]
+      drinksNA: []
     }
   }
-componentDidMount=()=>{
-  this.getDrinks()
-  this.getDrinksNA()
-}
-  
+  componentDidMount = () => {
+    this.getDrinks()
+    this.getDrinksNA()
+  }
+
   getDrinks = () => {
-    console.log("Get drink called")
-    
+    console.log("Get drinksA called")
+
     axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic', {
       headers: {
         Accept: 'application/json'
@@ -36,33 +36,33 @@ componentDidMount=()=>{
 
       })
   }
-     
-    getDrinksNA = () => {
-      console.log("Get drink called")
-      
-      axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic', {
-        headers: {
-          Accept: 'application/json'
-        }
-      })
-        .then(response => {
-          console.log(response.data.drinks)
-          this.setState({
-            drinksNA: response.data.drinks
-          })
-  
+
+  getDrinksNA = () => {
+    console.log("Get drinksNA called")
+
+    axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic', {
+      headers: {
+        Accept: 'application/json'
+      }
+    })
+      .then(response => {
+        console.log(response.data.drinks)
+        this.setState({
+          drinksNA: response.data.drinks
         })
-    }
-      
+
+      })
+  }
 
 
 
 
-    
+
+
 
 
   render() {
-    
+
     return (
       <div className="App">
 
@@ -71,10 +71,9 @@ componentDidMount=()=>{
         </header>
 
         <Switch>
-        < Route  exact path='/' render={(routerProps) =><Homepage getDrinks = {this.getDrinks} {...this.state} {...routerProps} />}></Route>
-        < Route path ='/Gallery/:drinkType'render={(routerProps) =><Gallery {...this.state}{...routerProps} />}></Route>
-        
-       </Switch>
+          < Route exact path='/' render={(routerProps) => <Homepage getDrinks={this.getDrinks} {...this.state} {...routerProps} />}></Route>
+          < Route path='/Gallery/:drinkType' render={(routerProps) => <Gallery {...this.state}{...routerProps} />}></Route>
+        </Switch>
 
       </div>
     );
