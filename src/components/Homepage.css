@@ -4,6 +4,7 @@
     color: white;
     
 }
+
 .pict {
     display: flex;
     flex-direction: row;
@@ -12,13 +13,43 @@
     align-items: center;
     
 }
+
 .box2{
     text-align: center;
 }
+
 .apic {
     border-radius: 15px 15px 15px 15px; /* top left, top right, bottom right, bottom left */
  }
-  .napic {
+
+.napic {
     /* border-radius: 70%; horizontal radius / vertical radius */
     border-radius: 15px 15px 15px 15px; /* top left, top right, bottom right, bottom left */
-  }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .pict {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        justify-content:space-around;
+        align-items: center;
+        
+    }
+
+    .apic {
+        max-height: 200px;
+        max-width: 200px;
+        border-radius: 15px 15px 15px 15px; /* top left, top right, bottom right, bottom left */
+        border: solid 3px whitesmoke;
+     }
+    
+    .napic {
+        /* border-radius: 70%; horizontal radius / vertical radius */
+        max-height: 200px;
+        max-width: 200px;
+        border-radius: 15px 15px 15px 15px; /* top left, top right, bottom right, bottom left */
+        border: solid 3px whitesmoke;
+    }
+}

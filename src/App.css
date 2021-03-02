@@ -25,6 +25,11 @@ a:active {
   color: white;
 }
 
+@media only screen and (max-width: 600px) {
+  a:link {
+    text-decoration: underline;
+  }
+}
 
 
 
