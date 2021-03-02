@@ -13,11 +13,13 @@ class Gallery extends Component {
         if (this.props.match.params.drinkType === "Alcoholic") {
             drinks = this.props.drinksA
         }
-        else {
+        else if (this.props.match.params.drinkType === "Non_Alcoholic") {
             drinks = this.props.drinksNA
         }
+        else if (this.props.match.params.drinkType === "Search") {
+            drinks = this.props.drinkIngredient
+        }
         console.log(drinks)
-
         let drinksList = drinks.map((value, index) =>
             <Link to={"/Recipe/" + value.idDrink} >
                 <div key={index}>

@@ -1,7 +1,7 @@
 body {
   margin: 0;
   /*height: 700px;*/
-  background: linear-gradient(180deg, rgb(0, 0, 0) 17%, #5e346c 35%,hsl(285, 19%, 39%) 100%);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 20%, #5e346c 35%,hsl(285, 19%, 39%) 100%);
   /* background: linear-gradient(black,#5e346c); */
   background-size: cover;
   background-repeat: no-repeat;

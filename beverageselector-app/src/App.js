@@ -8,12 +8,15 @@ import Homepage from './components/Homepage';
 import Gallery from './components/Gallery';
 import Recipe from './components/Recipe';
 
+
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
       drinksA: [],
-      drinksNA: []
+      drinksNA: [],
+      drinkIngredient: [],
+      
     }
   }
   componentDidMount = () => {
@@ -58,6 +61,29 @@ class App extends Component {
 
 
 
+  getDrinksByIngredient = (ingredient) => {
+    console.log(ingredient)
+    axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`, {
+      headers: {
+        Accept: 'application/json'
+      }
+    })
+      .then(response => {
+        console.log(response.data)
+        this.setState({
+          drinkIngredient: response.data.drinks
+        })
+
+      })
+
+    
+
+
+  }
+
+
+
+
 
 
 
@@ -68,7 +94,12 @@ class App extends Component {
       <div className="App">
 
         <header>
-          <Header />
+          <Route render={(routerProps)=> 
+          <Header  getDrinksByIngredient={this.getDrinksByIngredient} {...routerProps} />
+          }>
+
+          
+          </Route>
         </header>
 
         <Switch>
