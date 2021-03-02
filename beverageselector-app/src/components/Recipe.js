@@ -93,9 +93,9 @@ class Recipe extends Component {
                 <div className="title">{drinkHeader}    </div>
                 <div className="mainBox">
                     <div className="childBox1">
-                        <div className="label">Serving Container :</div>{container}
+                        <div className="label">Serving Container</div>{container}
                         <br></br><br></br>
-                        <div className="label">Ingredients :</div>
+                        <div className="label">Ingredients</div>
                         <div>
                             {strIngredient1 ? <div>{strIngredient1} - {strMeasure1 }<br></br></div> : null}
                             {strIngredient2 ? <div>{strIngredient2} - {strMeasure1 }<br></br></div> : null}
@@ -114,7 +114,7 @@ class Recipe extends Component {
                             {strIngredient15 ? <div>{strIngredient15} - {strMeasure15 }<br></br></div> : null}
                         </div>
                         <br></br><br></br>
-                        <div className="label">Preparation :</div>
+                        <div className="label">Preparation</div>
                         <div>{prepSteps}</div>
                         </div>
                     <div className="childBox2">{imgHolder}</div>
