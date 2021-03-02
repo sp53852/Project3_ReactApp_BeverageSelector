@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
 import './Homepage.css';
-import adrink from './img/alcohol_img.jpg';
-import nadrink from './img/non-alcohol.jpg';
-
-
-
-
-
 import { Switch, Route, Link, Redirect } from 'react-router-dom';
 
 
@@ -25,13 +18,13 @@ function Homepage(props) {
             <div className="pict">
                 <div>
                     <Link to={'/Gallery/Alcoholic'}>Alcoholic Links</Link> <br/>
-                    <img src={adrink}></img>
+                    <img src={process.env.PUBLIC_URL + '/images/alcohol_img.jpg' }></img>
                     {/* <img src ="{}" alt= "Alcoholic Drink Image"/> */}
                     
                 </div>
                 <div>
                     <Link to={'/Gallery/Non_Alcoholic'}>Non-Alcoholic Links</Link><br/>
-                    <img src={nadrink}></img>
+                    <img src={process.env.PUBLIC_URL + '/images/non_alcohol.jpg' }></img>
                     {/* <img src ="{}" alt= "Non-Alcoholic Drink Image"/> */}
                 </div>
             </div>
