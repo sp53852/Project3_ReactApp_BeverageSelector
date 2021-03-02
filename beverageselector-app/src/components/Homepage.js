@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './Homepage.css';
+import adrink from './img/alcohol_img.jpg';
+import nadrink from './img/non-alcohol.jpg';
+
 
 
 
@@ -22,12 +25,14 @@ function Homepage(props) {
             <div className="pict">
                 <div>
                     <Link to={'/Gallery/Alcoholic'}>Alcoholic Links</Link> <br/>
-                    <img src ="{}" alt= "Alcoholic Drink Image"/>
+                    <img src={adrink}></img>
+                    {/* <img src ="{}" alt= "Alcoholic Drink Image"/> */}
                     
                 </div>
                 <div>
                     <Link to={'/Gallery/Non_Alcoholic'}>Non-Alcoholic Links</Link><br/>
-                    <img src ="{}" alt= "Non-Alcoholic Drink Image"/>
+                    <img src={nadrink}></img>
+                    {/* <img src ="{}" alt= "Non-Alcoholic Drink Image"/> */}
                 </div>
             </div>
         </div>
