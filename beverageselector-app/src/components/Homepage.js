@@ -19,13 +19,13 @@ function Homepage(props) {
             </div>
             <div className="pict">
                 <div>
-                    <Link to={'/Gallery/Alcoholic'}>Alcoholic Links</Link> <br />
+                    <Link to={'/Gallery/Alcoholic'}>Alcoholic Drinks</Link> <br />
                     <img className='apic' src={adrink}></img>
                   
 
                 </div>
                 <div>
-                    <Link to={'/Gallery/Non_Alcoholic'}>Non-Alcoholic Links</Link><br />
+                    <Link to={'/Gallery/Non_Alcoholic'}>Non-Alcoholic Drinks</Link><br />
                     <img  className='napic' src={nadrink}></img>
                    
                 </div>
