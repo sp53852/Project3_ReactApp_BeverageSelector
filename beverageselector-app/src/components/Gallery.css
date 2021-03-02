@@ -1,5 +1,7 @@
 body{
-    background-color: white;
+    background-color: #f0f2f3;
+      
+ 
     }
 .container {
     position: relative;    
@@ -21,6 +23,7 @@ body{
     align-items: center;
 }
 img{
+  border-radius: 50%;
     height: 300px;
     width:300px;
     margin:30px;

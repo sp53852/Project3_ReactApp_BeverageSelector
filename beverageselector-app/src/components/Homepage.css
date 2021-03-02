@@ -15,3 +15,9 @@
 .box2{
     text-align: center;
 }
+.apic {
+    border-radius: 5px 10px 15px 20px; /* top left, top right, bottom right, bottom left */
+ }
+  .napic {
+    border-radius: 70%; /* horizontal radius / vertical radius */
+  }

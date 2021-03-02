@@ -1,10 +1,11 @@
 body {
   margin: 0;
   height: 700px;
-  /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
-  background: linear-gradient(black,#5e346c);
+  background: linear-gradient(180deg, black 15%, #24166c 35%, rgb(241, 243, 244) 100%);
+  /* background: linear-gradient(black,#5e346c); */
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #f0f2f3;
 }
 
 
