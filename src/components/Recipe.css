@@ -29,3 +29,14 @@
     font-size: large;
     color: #D9B175;
 }
+
+@media only screen and (max-width: 600px) {
+    .mainBox{
+        display:flex;
+        flex-direction: column;
+        align-content: center;
+        /*border: aliceblue 1px solid;*/
+        width: 50%;
+        transform: translate(50%,15%);
+    }
+}

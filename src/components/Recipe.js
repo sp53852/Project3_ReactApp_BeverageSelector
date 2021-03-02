@@ -92,6 +92,7 @@ class Recipe extends Component {
             <div className="mainParent" >                
                 <div className="title">{drinkHeader}    </div>
                 <div className="mainBox">
+                    <div className="childBox2">{imgHolder}</div>
                     <div className="childBox1">
                         <div className="label">Serving Container</div>{container}
                         <br></br><br></br>
@@ -116,8 +117,8 @@ class Recipe extends Component {
                         <br></br><br></br>
                         <div className="label">Preparation</div>
                         <div>{prepSteps}</div>
-                        </div>
-                    <div className="childBox2">{imgHolder}</div>
+                    </div>
+                    {/* <div className="childBox2">{imgHolder}</div> */}
                 </div>
             </div>
         )
