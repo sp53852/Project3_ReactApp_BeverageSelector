@@ -88,30 +88,38 @@ class Recipe extends Component {
     let prepSteps = this.state.drinkDetails.strInstructions
         
         return (
-            <div >
-                <div>{drinkHeader}    </div>
-                <div>{imgHolder}</div>
-                <div>{container}</div>
-                <div>
-                    {strIngredient1 ? <div>{strIngredient1} - {strMeasure1 }<br></br></div> : null}
-                    {strIngredient2 ? <div>{strIngredient2} - {strMeasure1 }<br></br></div> : null}
-                    {strIngredient3 ? <div>{strIngredient3} - {strMeasure3 }<br></br></div> : null}
-                    {strIngredient4 ? <div>{strIngredient4} - {strMeasure4 }<br></br></div> : null}
-                    {strIngredient5 ? <div>{strIngredient5} - {strMeasure5 }<br></br></div> : null}
-                    {strIngredient6 ? <div>{strIngredient6} - {strMeasure6 }<br></br></div> : null}
-                    {strIngredient7 ? <div>{strIngredient7} - {strMeasure7 }<br></br></div> : null}
-                    {strIngredient8 ? <div>{strIngredient8} - {strMeasure8 }<br></br></div> : null}
-                    {strIngredient9 ? <div>{strIngredient9} - {strMeasure9 }<br></br></div> : null}
-                    {strIngredient10 ? <div>{strIngredient10} - {strMeasure10 }<br></br></div> : null}
-                    {strIngredient11 ? <div>{strIngredient11} - {strMeasure11 }<br></br></div> : null}
-                    {strIngredient12 ? <div>{strIngredient12} - {strMeasure12 }<br></br></div> : null}
-                    {strIngredient13 ? <div>{strIngredient13} - {strMeasure13 }<br></br></div> : null}
-                    {strIngredient14 ? <div>{strIngredient14} - {strMeasure14 }<br></br></div> : null}
-                    {strIngredient15 ? <div>{strIngredient15} - {strMeasure15 }<br></br></div> : null}
+    
+            <div className="mainParent" >                
+                <div className="title">{drinkHeader}    </div>
+                <div className="mainBox">
+                    <div className="childBox1">
+                        <div className="label">Serving Container</div>{container}
+                        <br></br><br></br>
+                        <div className="label">Ingredients</div>
+                        <div>
+                            {strIngredient1 ? <div>{strIngredient1} - {strMeasure1 }<br></br></div> : null}
+                            {strIngredient2 ? <div>{strIngredient2} - {strMeasure1 }<br></br></div> : null}
+                            {strIngredient3 ? <div>{strIngredient3} - {strMeasure3 }<br></br></div> : null}
+                            {strIngredient4 ? <div>{strIngredient4} - {strMeasure4 }<br></br></div> : null}
+                            {strIngredient5 ? <div>{strIngredient5} - {strMeasure5 }<br></br></div> : null}
+                            {strIngredient6 ? <div>{strIngredient6} - {strMeasure6 }<br></br></div> : null}
+                            {strIngredient7 ? <div>{strIngredient7} - {strMeasure7 }<br></br></div> : null}
+                            {strIngredient8 ? <div>{strIngredient8} - {strMeasure8 }<br></br></div> : null}
+                            {strIngredient9 ? <div>{strIngredient9} - {strMeasure9 }<br></br></div> : null}
+                            {strIngredient10 ? <div>{strIngredient10} - {strMeasure10 }<br></br></div> : null}
+                            {strIngredient11 ? <div>{strIngredient11} - {strMeasure11 }<br></br></div> : null}
+                            {strIngredient12 ? <div>{strIngredient12} - {strMeasure12 }<br></br></div> : null}
+                            {strIngredient13 ? <div>{strIngredient13} - {strMeasure13 }<br></br></div> : null}
+                            {strIngredient14 ? <div>{strIngredient14} - {strMeasure14 }<br></br></div> : null}
+                            {strIngredient15 ? <div>{strIngredient15} - {strMeasure15 }<br></br></div> : null}
+                        </div>
+                        <br></br><br></br>
+                        <div className="label">Preparation</div>
+                        <div>{prepSteps}</div>
+                        </div>
+                    <div className="childBox2">{imgHolder}</div>
                 </div>
-                <div>{prepSteps}</div>
             </div>
-
         )
     }
 

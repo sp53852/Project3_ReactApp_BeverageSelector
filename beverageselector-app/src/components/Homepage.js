@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import './Homepage.css';
-import adrink from './img/alcohol_img.jpg';
-import nadrink from './img/non-alcohol.jpg';
-
-
-
-
-
 import { Switch, Route, Link, Redirect } from 'react-router-dom';
+import adrink from './images/alcohol_img.jpg'
+import nadrink from './images/non_alcohol.jpg'
 
 
 function Homepage(props) {
@@ -26,13 +21,13 @@ function Homepage(props) {
                 <div>
                     <Link to={'/Gallery/Alcoholic'}>Alcoholic Links</Link> <br />
                     <img className='apic' src={adrink}></img>
-                    {/* <img src ="{}" alt= "Alcoholic Drink Image"/> */}
+                  
 
                 </div>
                 <div>
                     <Link to={'/Gallery/Non_Alcoholic'}>Non-Alcoholic Links</Link><br />
                     <img  className='napic' src={nadrink}></img>
-                    {/* <img src ="{}" alt= "Non-Alcoholic Drink Image"/> */}
+                   
                 </div>
             </div>
         </div>
